@@ -1,0 +1,31 @@
+{
+	"intents": 
+[
+{
+		"tag" : "greeting", 
+		"patterns": ["Hi", "Hello", "What's Up", "Good morning", "Good evening", "hey"],
+		"context_set": ""
+}
+
+	{
+		"tag": "goodbye",
+		"patterns": ["bye", "see ya", "goodbye", "see you later"]
+	}
+
+	{
+		"tag": "thanks",
+		"patterns": ["thanks", "thank you!", "that's helpful"]
+	}
+
+	{
+		"tag": "query",
+		"patterns": ["weight loss", "diet", "workout", "running", "quick", "HIIT"]
+	}
+
+	{
+		"tag": "diet tips",
+		"patterns": ["vegan", "vegetarian", "keto", "paleo", "whole 30", "protein", "macros", "calories"]
+	}
+]
+
+}
