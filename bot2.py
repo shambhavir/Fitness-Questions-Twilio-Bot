@@ -1,3 +1,4 @@
+import flask 
 from flask import Flask, request 
 from twilio.twiml.messaging_response import MessagingResponse
 import json
@@ -116,42 +117,52 @@ def bot():
 	resp = MessagingResponse()
 	msg = resp.message()
 	responded = False
+	data100 = {}
 	if incoming_msg in words:
 		r = requests.get('https://api.quotable.io/random')
 		if r.status_code == 200:
 			data100 = r.json()
-			response100 = f'{data["content"]} ({data["author"]})'
+			response100 = str(data100)
 			msg.body(response100)
 			responded = True
-	else if incoming_msg in words2:
+	elif incoming_msg in words2:
 		r = requests.get('https://api.quotable.io/random')
 		if r.status_code == 200:
 			data100 = r.json()
-			response100 = f'{data["content"]} ({data["author"]})'
+			response100 = str(data100)
 			msg.body(response100)
 			responded = True
-	else if incoming_msg in words3:
+	elif incoming_msg in words3:
 		r = requests.get('https://api.quotable.io/random')
 		if r.status_code == 200:
 			data100 = r.json()
-			response100 = f'{data["content"]} ({data["author"]})'
+			response100 = str(data100)
 			msg.body(response100)
 			responded = True
-	else if incoming_msg in words4:
+	elif incoming_msg in words4:
 		r = requests.get('https://www.livestrong.org/')
 		if r.status_code == 200:
 			data100 = r.json()
-			response100 = f'{data["content"]} ({data["author"]})'
+			response100 = str(data100)
 			msg.body(response100)
 			responded = True
-	else if incoming_msg in words5:
+	elif incoming_msg in words5:
 		r = requests.get('https://www.webmd.com/diet/ss/slideshow-best-diet-tips-ever')
 		if r.status_code == 200:
 			data100 = r.json()
-			response100 = f'{data["content"]} ({data["author"]})'
+			response100 = str(data100)
 			msg.body(response100)
 			responded = True
-	return str(resp)
+print str(resp)
+
+	
+
+
+
+
+
+
+
 
 	
 
